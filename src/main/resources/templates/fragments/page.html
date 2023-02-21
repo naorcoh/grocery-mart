@@ -1,0 +1,15 @@
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<section layout:fragment="page(title)">
+  <header th:text="${title}">Title goes here</header>
+  <div class="body">
+    <div layout:fragment="page-content">
+      Content goes here
+    </div>
+  </div>
+</section>
+
+
+
+</html>

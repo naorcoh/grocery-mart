@@ -20127,7 +20127,7 @@ p.banner-sub {
   border: 1px solid #3c43a4;
 }
 
-/*-- image-hover --*/
+/*-- image-hover
 .w3_hs_bottom {
   position: absolute;
   width: 100%;
@@ -20150,7 +20150,7 @@ p.banner-sub {
   -ms-transition: all 0.2s 0.4s ease-in-out;
   transition: all 0.2s 0.4s ease-in-out;
   border-radius: var(--border-radius);
-}
+}--*/
 
 .w3_hs_bottom ul,
 .flex_ecommerce {
@@ -20421,6 +20421,7 @@ p.banner-sub {
   z-index: 2;
 }
 
+/*
 .agile_ecommerce_tab_left:hover .hs-wrapper img,
 .hs-wrapper:hover img {
   -webkit-animation-play-state: running;
@@ -20429,6 +20430,7 @@ p.banner-sub {
   -ms-animation-play-state: running;
   animation-play-state: running;
 }
+*/
 
 .hs-overlay {
   position: absolute;
@@ -20469,7 +20471,7 @@ p.banner-sub {
   -ms-user-select: none;
   user-select: none;
 }
-
+/**/
 .hs-wrapper:hover .hs-overlay {
   opacity: 1;
   box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3) inset;
