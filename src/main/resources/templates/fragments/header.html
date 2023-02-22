@@ -1,190 +1,330 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<th:block th:fragment="header">
-
-        <!-- top header -->
-        <div class="header" id="home1">
-            <div class="container">
-                <div class="d-flex align-items-center justify-content-between">
-                    <!-- login -->
-                    <div class="w3l_login">
-                        <a href="#myModal12" data-bs-toggle="modal" data-bs-target="#myModal12"><i
-                                class="fas fa-user"></i></a>
-                    </div>
-                    <!-- logo -->
-                    <div class="w3l_logo text-center ml-auto">
-                        <h1><a href="index.html">Grocery Mart<span>Online Grocery Shopping</span></a></h1>
-                    </div>
-                    <!-- search -->
-                    <div class="header-search position-absolute">
-                        <div class="search-right mx-lg-2">
-                            <a href="#search" class="btn search-btn p-0" title="search">
-                                <i class="fas fa-search"></i></a>
-                            <!-- search popup -->
-                            <div id="search" class="pop-overlay">
-                                <div class="popup">
-                                    <form action="error.html" method="GET" class="search-box">
-                                        <input type="search" placeholder="Enter Keyword..." name="search"
-                                               required="required" autofocus="">
-                                        <button type="submit" class="btn"><span class="fas fa-search"
-                                                                                aria-hidden="true"></span></button>
-                                    </form>
-                                </div>
-                                <a class="close" href="#close">×</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- cart -->
-                    <div class="cart cart box_1">
-                        <form action="#" method="post" class="last">
-                            <input type="hidden" name="cmd" value="_cart" />
-                            <input type="hidden" name="display" value="1" />
-                            <button class="w3view-cart" type="submit" name="submit" value=""><i
-                                    class="fas fa-shopping-bag"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //top header -->
-
-        <!-- header modal -->
-        <div class="modal fade" id="myModal12" tabindex="-1" aria-labelledby="myModal12" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="row modal-body">
-                        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                                        type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                                        type="button" role="tab" aria-controls="profile" aria-selected="false">Register</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content p-0" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="register">
-                                    <form action="#" method="post">
-                                        <input name="Email" placeholder="Email Address" type="text" required="">
-                                        <input name="Password" placeholder="Password" type="password" required="">
-                                        <div class="sign-up">
-                                            <input type="submit" value="Sign in">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div class="register">
-                                    <form action="#" method="post">
-                                        <input placeholder="Name" name="Name" type="text" required="">
-                                        <input placeholder="Email Address" name="Email" type="email" required="">
-                                        <input placeholder="Password" name="Password" type="password" required="">
-                                        <input placeholder="Confirm Password" name="Password" type="password" required="">
-                                        <div class="sign-up">
-                                            <input type="submit" value="Create Account">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- header modal -->
-
-        <!-- header -->
-        <header id="site-header" class="fixed-top">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+  <th:block th:fragment="header">
+    <!-- top header -->
+    <div class="header" id="home1">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- login -->
+          <div class="w3l_login">
+            <a
+              href="#myModal12"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal12"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+          <!-- logo -->
+          <div class="w3l_logo text-center ml-auto">
+            <h1>
+              <a href="index.html"
+                >Grocery Mart<span>Online Grocery Shopping</span></a
+              >
+            </h1>
+          </div>
+          <!-- search -->
+          <div class="header-search position-absolute">
+            <div class="search-right mx-lg-2">
+              <a href="#search" class="btn search-btn p-0" title="search">
+                <i class="fas fa-search"></i
+              ></a>
+              <!-- search popup -->
+              <div id="search" class="pop-overlay">
+                <div class="popup">
+                  <form action="error.html" method="GET" class="search-box">
+                    <input
+                      type="search"
+                      placeholder="Enter Keyword..."
+                      name="search"
+                      required="required"
+                      autofocus=""
+                    />
+                    <button type="submit" class="btn">
+                      <span class="fas fa-search" aria-hidden="true"> </span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">
-                                    Products <i class="fas fa-angle-down"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-2" aria-labelledby="navbarScrollingDropdown">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <ul class="multi-column-dropdown">
-                                                <h6>Kitchen</h6>
-                                                <li><a href="products1.html">Meat & Seafood </a></li>
-                                                <li><a href="products1.html">Snack Foods<span>New</span></a></li>
-                                                <li><a href="products1.html">Oils, Vinegars</a></li>
-                                                <li><a href="products1.html">Pasta & Noodles<span>New</span></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-4 mt-lg-0 mt-4">
-                                            <ul class="multi-column-dropdown">
-                                                <h6>Household</h6>
-                                                <li><a href="products2.html">Detergents</a></li>
-                                                <li><a href="products2.html">Floor & Other Cleaners</a></li>
-                                                <li><a href="products2.html">Pet Care <span>New</span></a></li>
-                                                <li><a href="products2.html"><i>Festive Decoratives</i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="w3ls_products_pos">
-                                                <h4 class="mb-4">30%<i>Off/-</i></h4>
-                                                <img src="/images/nav.png" alt=" " class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pages <i class="fas fa-angle-down"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="blog.html">Blog Posts</a></li>
-                                    <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-                                    <li><a class="dropdown-item" href="single.html">Single</a></li>
-                                    <li><a class="dropdown-item" href="faq.html">Faq's</a></li>
-                                    <li><a class="dropdown-item" href="shortcodes.html">Shortcodes</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- toggle switch for light and dark theme -->
-                    <div class="cont-ser-position">
-                        <nav class="navigation-dark">
-                            <div class="theme-switch-wrapper">
-                                <label class="theme-switch" for="checkbox">
-                                    <input type="checkbox" id="checkbox">
-                                    <div class="mode-container">
-                                        <i class="gg-sun"></i>
-                                        <i class="gg-moon"></i>
-                                    </div>
-                                </label>
-                            </div>
-                        </nav>
-                    </div>
-                    <!-- //toggle switch for light and dark theme -->
-                </nav>
+                  </form>
+                </div>
+                <a class="close" href="#close">×</a>
+              </div>
             </div>
-        </header>
-        <!-- //header -->
+          </div>
+          <!-- cart -->
+          <div class="cart cart box_1">
+            <form action="#" method="post" class="last">
+              <input type="hidden" name="cmd" value="_cart" />
+              <input type="hidden" name="display" value="1" />
+              <button class="w3view-cart" type="submit" name="submit" value="">
+                <i class="fas fa-shopping-bag"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //top header -->
 
-</th:block>
+    <!-- header modal -->
+    <div
+      class="modal fade"
+      id="myModal12"
+      tabindex="-1"
+      aria-labelledby="myModal12"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="row modal-body">
+            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home"
+                  type="button"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  Login
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Register
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content p-0" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <div class="register">
+                  <form action="#" method="post">
+                    <input
+                      name="Email"
+                      placeholder="Email Address"
+                      type="text"
+                      required=""
+                    />
+                    <input
+                      name="Password"
+                      placeholder="Password"
+                      type="password"
+                      required=""
+                    />
+                    <div class="sign-up">
+                      <input type="submit" value="Sign in" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <div class="register">
+                  <form action="#" method="post">
+                    <input
+                      placeholder="Name"
+                      name="Name"
+                      type="text"
+                      required=""
+                    />
+                    <input
+                      placeholder="Email Address"
+                      name="Email"
+                      type="email"
+                      required=""
+                    />
+                    <input
+                      placeholder="Password"
+                      name="Password"
+                      type="password"
+                      required=""
+                    />
+                    <input
+                      placeholder="Confirm Password"
+                      name="Password"
+                      type="password"
+                      required=""
+                    />
+                    <div class="sign-up">
+                      <input type="submit" value="Create Account" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header modal -->
+
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Products <i class="fas fa-angle-down"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-2"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <ul class="multi-column-dropdown">
+                        <h6>Kitchen</h6>
+                        <li><a href="products1.html">Meat & Seafood </a></li>
+                        <li>
+                          <a href="products1.html"
+                            >Snack Foods<span>New</span></a
+                          >
+                        </li>
+                        <li><a href="products1.html">Oils, Vinegars</a></li>
+                        <li>
+                          <a href="products1.html"
+                            >Pasta & Noodles<span>New</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-4 mt-lg-0 mt-4">
+                      <ul class="multi-column-dropdown">
+                        <h6>Household</h6>
+                        <li><a href="products2.html">Detergents</a></li>
+                        <li>
+                          <a href="products2.html">Floor & Other Cleaners</a>
+                        </li>
+                        <li>
+                          <a href="products2.html">Pet Care <span>New</span></a>
+                        </li>
+                        <li>
+                          <a href="products2.html"
+                            ><i>Festive Decoratives</i></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="w3ls_products_pos">
+                        <h4 class="mb-4">30%<i>Off/-</i></h4>
+                        <img src="/images/nav.png" alt=" " class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages <i class="fas fa-angle-down"></i>
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="blog.html">Blog Posts</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="blog-single.html"
+                      >Blog Single</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="single.html">Single</a>
+                  </li>
+                  <li><a class="dropdown-item" href="faq.html">Faq's</a></li>
+                  <li>
+                    <a class="dropdown-item" href="shortcodes.html"
+                      >Shortcodes</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- toggle switch for light and dark theme -->
+          <div class="cont-ser-position">
+            <nav class="navigation-dark">
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="mode-container">
+                    <i class="gg-sun"></i>
+                    <i class="gg-moon"></i>
+                  </div>
+                </label>
+              </div>
+            </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+  </th:block>
+</html>

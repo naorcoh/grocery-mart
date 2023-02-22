@@ -1,20 +1,22 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 >
-<th:block layout:fragment="current_page(title)">
+  <th:block layout:fragment="current_page(title)">
     <div class="breadcrumb_dress">
-        <div class="container">
-            <ul>
-                <li>
-                    <a th:href="@{/home}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
-                    <i>/</i>
-                </li>
-                <li th:text="${title}">
-                    Products
-                </li>
-            </ul>
-        </div>
+      <div class="container">
+        <ul>
+          <li>
+            <a th:href="@{/home}"
+              ><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+              Home</a
+            >
+            <i>/</i>
+          </li>
+          <li th:text="${title}">Products</li>
+        </ul>
+      </div>
     </div>
-</th:block>
-
+  </th:block>
 </html>

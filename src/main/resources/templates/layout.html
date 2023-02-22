@@ -1,44 +1,53 @@
-<!doctype html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 >
-<head>
+  <head>
     <script src="http://localhost:35729/livereload.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Grocery Mart</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">
+      Grocery Mart
+    </title>
     <!-- Custom Theme files -->
-    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link
+      th:href="@{css/style.css}"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
     <!-- //Custom Theme files -->
-</head>
-<body>
+  </head>
+  <body>
+    <th:block th:insert="~{fragments/header :: header}"></th:block>
+    <!-- //header -->
 
-<th:block th:insert="~{fragments/header :: header}"></th:block>
-<!-- //header -->
+    <!-- banner -->
+    <th:block th:insert="~{fragments/banner :: banner}"></th:block>
+    <!-- //banner -->
 
-<!-- banner -->
-<th:block th:insert="~{fragments/banner :: banner}"></th:block>
-<!-- //banner -->
+    <!-- breadcrumbs -->
+    <th:block layout:fragment="breadcrumbs">
+      <!--this is area for content-->
+    </th:block>
+    <!-- //breadcrumbs -->
 
-<!-- breadcrumbs -->
-<th:block layout:fragment="breadcrumbs">
-    <!--this is area for content-->
-</th:block>
-<!-- //breadcrumbs -->
+    <th:block layout:fragment="content">
+      <!--this is area for content-->
+    </th:block>
 
-<th:block layout:fragment="content">
-    <!--this is area for content-->
-</th:block>
+    <!-- footer -->
+    <th:block th:insert="~{fragments/footer :: footer}"></th:block>
+    <!-- //footer -->
 
-<!-- footer -->
-<th:block th:insert="~{fragments/footer :: footer}"></th:block>
-<!-- //footer -->
-
-<!-- js-scripts -->
-<th:block th:insert="~{fragments/scripts :: scripts}">footer</th:block>
-<!-- //js-scripts -->
-</body>
+    <!-- js-scripts -->
+    <th:block th:insert="~{fragments/scripts :: scripts}">footer</th:block>
+    <!-- //js-scripts -->
+  </body>
 </html>

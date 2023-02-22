@@ -1,16 +1,14 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout}">
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout}"
+>
+  <th:block layout:fragment="breadcrumbs">
+    <th:block
+      layout:insert="~{fragments/breadcrumbs :: current_page(${title})}"
+    ></th:block>
+  </th:block>
 
-<th:block layout:fragment="breadcrumbs">
-    <th:block layout:insert="~{fragments/breadcrumbs :: current_page(${title})}"></th:block>
-</th:block>
-
-
-<th:block layout:fragment="content">
-
-</th:block>
+  <th:block layout:fragment="content"> </th:block>
 </html>
-
-
-

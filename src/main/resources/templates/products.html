@@ -29,7 +29,6 @@
 														   th:onchange="this.form.submit()">
 													<label th:for="${cat}" th:text="${cat}"></label>
 
-													<!--												th:onchange="this.form.submit()"-->
 
 												</div>
 											</a>
@@ -48,7 +47,6 @@
 										<li>
 											<a>
 
-												<!--											th:onchange="this.form.submit()"-->
 												<div th:each="brand : ${brandsList}">
 													<input type="checkbox" class="checked" th:id="${brand}" name="brand"
 														   th:value="${brand}" th:checked="*{brand.isActive}"
