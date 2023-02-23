@@ -8,82 +8,9 @@
 
 <th:block layout:fragment="content">
 	<!-- mobiles -->
-	<div class="mobiles py-5">
-
-		<div class="container py-lg-4 py-3">
-			<div class="row w3ls_mobiles_grids">
-				<div class="col-md-4 w3ls_mobiles_grid_left">
-					<form method="post" th:action="@{/products}">
-						<div class="w3ls_mobiles_grid_left_grid">
-							<h3>Categories</h3>
-							<div class="w3ls_mobiles_grid_left_grid_sub">
-
-								<div class="ecommerce_color">
-									<ul>
-										<li>
-											<a>
-												<div th:each="cat : ${categories}">
-
-													<input type="checkbox" th:id="${cat}" th:name="category"
-														   th:value="${cat}" th:checked="*{cat.isActive}"
-														   th:onchange="this.form.submit()">
-													<label th:for="${cat}" th:text="${cat}"></label>
-
-
-												</div>
-											</a>
-										</li>
-
-									</ul>
-
-								</div>
-							</div>
-						</div>
-						<div class="w3ls_mobiles_grid_left_grid">
-							<h3>Brand</h3>
-							<div class="w3ls_mobiles_grid_left_grid_sub">
-								<div class="ecommerce_color">
-									<ul>
-										<li>
-											<a>
-
-												<div th:each="brand : ${brandsList}">
-													<input type="checkbox" class="checked" th:id="${brand}" name="brand"
-														   th:value="${brand}" th:checked="*{brand.isActive}"
-														   th:onchange="this.form.submit()">
-													<label th:for="${brand}" th:text="${brand}"></label>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="w3ls_mobiles_grid_left_grid">
-							<h3>Price</h3>
-							<div class="w3ls_mobiles_grid_left_grid_sub">
-								<div class="ecommerce_color ecommerce_size">
-									<ul>
-										<li><a href="#"><input type="checkbox" class="checked">Below $ 100</a></li>
-										<li><a href="#"><input type="checkbox" class="checked">$ 100-500</a></li>
-										<li><a href="#"><input type="checkbox" class="checked">$ 1k-10k</a></li>
-										<li><a href="#"><input type="checkbox" class="checked">$ 10k-20k</a></li>
-										<li><a href="#"><input type="checkbox" class="checked">$ Above 20k</a></li>
-									</ul>
-
-
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-
-				<th:block th:insert="~{fragments/products_list :: products_list}"></th:block>
-		</div>
-
-
-	</div>
+	<th:block th:insert="~{fragments/products/products_content :: products_content}"></th:block>
 	<!-- //mobiles -->
+
 
 </th:block>
 

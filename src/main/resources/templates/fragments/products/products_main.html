@@ -1,0 +1,11 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="products_main">
+    <div class="col-md-8 w3ls_mobiles_grid_right">
+
+      <th:block th:insert="~{fragments/products/main/products_banner :: products_banner}"></th:block>
+      <th:block th:insert="~{fragments/products/main/products_sort :: products_sort}"></th:block>
+      <th:block th:insert="~{fragments/products/main/products_list :: products_list}"></th:block>
+
+    </div>
+  </th:block>
+</html>

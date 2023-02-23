@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="products_filters">
+  <div class="col-md-4 w3ls_mobiles_grid_left">
+    <form method="post" th:action="@{/products}">
+
+      <th:block th:insert="~{fragments/products/filters/categories-filter :: categories-filter}"></th:block>
+      <th:block th:insert="~{fragments/products/filters/brands-filter :: brands-filter}"></th:block>
+      <th:block th:insert="~{fragments/products/filters/prices-filter :: prices-filter}"></th:block>
+
+    </form>
+  </div>
+
+</th:block>
+</html>

@@ -1,0 +1,24 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="brands-filter">
+    <div class="w3ls_mobiles_grid_left_grid">
+        <h3>Brand</h3>
+        <div class="w3ls_mobiles_grid_left_grid_sub">
+            <div class="ecommerce_color">
+                <ul>
+                    <li>
+                        <a>
+
+                            <div th:each="brand : ${brandsList}">
+                                <input type="checkbox" class="checked" th:id="${brand}" name="brand"
+                                       th:value="${brand}" th:checked="*{brand.isActive}"
+                                       th:onchange="this.form.submit()">
+                                <label th:for="${brand}" th:text="${brand}"></label>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

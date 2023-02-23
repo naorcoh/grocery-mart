@@ -1,0 +1,29 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="categories-filter">
+    <div class="w3ls_mobiles_grid_left_grid">
+      <h3>Categories</h3>
+      <div class="w3ls_mobiles_grid_left_grid_sub">
+
+        <div class="ecommerce_color">
+          <ul>
+            <li>
+              <a>
+                <div th:each="cat : ${categories}">
+
+                  <input type="checkbox" th:id="${cat}" th:name="category"
+                         th:value="${cat}" th:checked="*{cat.isActive}"
+                         th:onchange="this.form.submit()">
+                  <label th:for="${cat}" th:text="${cat}"></label>
+
+
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </th:block>
+</html>

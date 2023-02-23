@@ -1,0 +1,21 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="products_sort">
+    <div class="w3ls_mobiles_grid_right_grid2">
+        <div class="w3ls_mobiles_grid_right_grid2_left">
+            <h3 th:text="'Showing Results: ' + ${productsList.size}">Showing Results: </h3>
+        </div>
+
+        <div class="w3ls_mobiles_grid_right_grid2_right">
+            <select name="select_item" class="select_item">
+                <option selected="selected">Default sorting</option>
+                <option>Sort by popularity</option>
+                <option>Sort by average rating</option>
+                <option>Sort by newness</option>
+                <option>Sort by price: low to high</option>
+                <option>Sort by price: high to low</option>
+            </select>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</th:block>
+</html>

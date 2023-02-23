@@ -1,0 +1,18 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="products_content">
+    <div class="mobiles py-5">
+        <div class="container py-lg-4 py-3">
+            <div class="row w3ls_mobiles_grids">
+                <!-- filters -->
+                <th:block th:insert="~{fragments/products/products_filters :: products_filters}"></th:block>
+                <!-- //filters -->
+
+                <!-- products -->
+                <th:block th:insert="~{fragments/products/products_main :: products_main}"></th:block>
+                <!-- //products -->
+
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>
